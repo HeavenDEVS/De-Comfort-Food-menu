@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>De Comfort | Nigerian Dishes Menu</title>
+    <meta name="description" content="De Comfort restaurant menu featuring Nigerian dishes: rice, soups, swallows, snacks, and specials with photos and details." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">🍽️</div>
+          <div class="brand-text">
+            <h1 class="title">De Comfort</h1>
+            <p class="subtitle">Authentic Nigerian Cuisine</p>
+          </div>
+        </div>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main>` 
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h2>Explore Nigeria's Flavors</h2>
+            <p>From smoky jollof to hearty soups and street snacks, discover dishes curated with comfort and joy.</p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="plate ring"></div>
+            <div class="plate fill"></div>
+            <div class="steam s1"></div>
+            <div class="steam s2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="container controls-inner">
+          <div class="search">
+            <input id="searchInput" type="search" placeholder="Search dishes, e.g., jollof, egusi, suya..." aria-label="Search dishes" />
+          </div>
+          <div id="categoryChips" class="chips" role="tablist" aria-label="Categories">
+            <!-- dynamically populated -->
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-grid-section">
+        <div class="container">
+          <div id="menuGrid" class="menu-grid" aria-live="polite" aria-busy="false">
+            <!-- cards go here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="dishModal" class="modal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content" role="document">
+        <button class="icon-btn close" aria-label="Close details" data-close>✕</button>
+        <div class="modal-media">
+          <img id="modalImage" alt="Dish image" />
+        </div>
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc" class="muted"></p>
+          <div class="meta">
+            <span id="modalCategory" class="chip"></span>
+            <span id="modalSpice" class="chip spice"></span>
+            <span id="modalPrice" class="chip price"></span>
+          </div>
+          <div class="details">
+            <h4>Ingredients</h4>
+            <ul id="modalIngredients"></ul>
+            <h4>Allergens</h4>
+            <p id="modalAllergens" class="muted"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> De Comfort. Crafted with love for Nigerian cuisine.</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
+
+
